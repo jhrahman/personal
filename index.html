@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
 
   <!-- Live Style Switcher - Demo Only -->
-  <link rel="stylesheet" class="alternate-style" title="pink" href="css/skins/pink.css" type="text/css">
-  <link rel="stylesheet" class="alternate-style" title="blue" href="css/skins/blue.css" type="text/css" disabled>
+  <link rel="stylesheet" class="alternate-style" title="pink" href="css/skins/pink.css" type="text/css" disabled>
+  <link rel="stylesheet" class="alternate-style" title="blue" href="css/skins/blue.css" type="text/css">
   <link rel="stylesheet" class="alternate-style" title="green" href="css/skins/green.css" type="text/css" disabled>
   <link rel="stylesheet" class="alternate-style" title="orange" href="css/skins/orange.css" type="text/css" disabled>
   <link rel="stylesheet" class="alternate-style" title="yellow" href="css/skins/yellow.css" type="text/css" disabled>
@@ -604,15 +604,35 @@
     <label>
       <input type="radio" class="body-skin" name="body-skin" value="dark"> Dark
     </label>
-    <h5>Page Views</h5>
+    <h5>Total Hits</h5>
     <label>
 	    
-<!-- 	    Web Counter  -->
-       
-       <a href="https://www.hitwebcounter.com" target="_blank">
-       <img src="https://hitwebcounter.com/counter/counter.php?page=7826998&style=0032&nbdigits=4&type=ip&initCount=84" title="Free Counter" Alt="web counter"   border="0" /></a>                                    
-                                    
-<!--        Web Counter End  -->
+  <!-- Total Hits Code START -->
+<!--   as I dont have any premium server and database for unique IP storage I can not count unique visitors -->
+	    
+	    
+  <div id="CounterVisitor">
+  </div>
+  <script>
+  var n = localStorage.getItem('on_load_counter');
+  
+  if (n === null) {
+    n = 0;
+  }
+  n++;
+  
+  localStorage.setItem("on_load_counter", n);
+  
+  nums = n.toString().split('').map(Number);
+  document.getElementById('CounterVisitor').innerHTML = '';
+  for (var i of nums) {
+    document.getElementById('CounterVisitor').innerHTML += '<span class="counter-item">' + i + '</span>';
+  }
+  var str="times"
+  </script>
+                                                   
+                                        
+  <!-- Total hits code  end -->
 	    
 	    
 </div>
