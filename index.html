@@ -459,30 +459,30 @@
 
           <!-- Contact Form -->
           <div class="row">
-            <form action="#" class="contact-form padd-15">
+            <form action="javascript:sendmail()" method="post" class="contact-form padd-15">
               <div class="row">
                 <div class="form-item col-6 padd-15">
                   <div class="form-group">
-                    <input type="text" name="" class="form-control" placeholder="Name*">
+                    <input type="text" name="Name" id="Name" class="form-control" placeholder="Name*">
                   </div>
                 </div>
                 <div class="form-item col-6 padd-15">
                   <div class="form-group">
-                    <input type="email" name="" class="form-control" placeholder="Email*">
+                    <input type="email" name="Email" id="Email" class="form-control" placeholder="Email*">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="form-item col-12 padd-15">
                   <div class="form-group">
-                    <input type="text" name="" class="form-control" placeholder="Subject*">
+                    <input type="text" name="Subject" id="Subject" class="form-control" placeholder="Subject*">
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="form-item col-12 padd-15">
                   <div class="form-group">
-                    <textarea class="form-control" name="" placeholder="Your Message..."></textarea>
+                    <textarea class="form-control" name="Message" id="Message" placeholder="Your Message..."></textarea>
                   </div>
                 </div>
               </div>
@@ -502,7 +502,71 @@
     <!-- Main Content End -->
   </div>
   <!-- Main Container End -->
+      
+      
+      
+      
+<!--   Contact Form Formula -->
+  
+      
+<!--   JQuery CDN -->
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!--       smtpJS CDN -->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+<script>  
 
+     function sendmail(){
+    
+			var name = $('#Name').val();
+			var email = $('#Sender').val();
+			var subject = $('#Subject').val();
+      var message = $('#Message').val();
+
+			// var body = $('#body').val();
+
+			var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+			//console.log(name, phone, email, message);
+
+			Email.send({
+        SecureToken:"21970709-cce6-41f0-af2c-4d5b5c7535cf",
+				To: 'tflash978@gmail.com',
+				From: "testd6474@gmail.com",
+				Subject: "Contact Form "+name,
+				Body: Body
+			}).then(
+				message =>{
+					//console.log (message);
+					if(message=='OK'){
+					alert('Success!! Thank you for your feedback.');
+					}
+					else{
+						console.error (message);
+						alert(' opps!!! There is an error occured while sending message. ')
+						
+					}
+
+				}
+			);
+
+
+
+		}
+
+      
+    </script>
+ </script>
+     
+      
+      
+<!--  Contact Fromula End -->
+      
+      
+      
+      
+      
   <!-- Lightbox -->
   <div class="lightbox">
     <div class="lightbox-content">
