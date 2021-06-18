@@ -537,13 +537,14 @@
         SecureToken:"21970709-cce6-41f0-af2c-4d5b5c7535cf",
 				To: 'tflash978@gmail.com',
 				From: "testd6474@gmail.com",
-				Subject: "Contact Form "+name,
+				Subject: "Email From:  "+name,
 				Body: Body
 			}).then(
 				message =>{
 					//console.log (message);
 					if(message=='OK'){
 					alert('Success!! Thank you for your feedback.');
+					window.location.reload();
 					}
 					else{
 						console.error (message);
