@@ -1333,3 +1333,9 @@ select {
     font-weight: 700;
     font-size: 0.7rem;
 }
+
+
+/* For ladergif */
+.sent{
+    color: rgb(123, 153, 15);
+}
