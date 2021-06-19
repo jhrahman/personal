@@ -232,3 +232,32 @@ function sendmail(){
 		}
 
 // Contact form end 
+
+
+// showDiv
+
+function showDiv() {
+    
+    var message = $('#Message').val();
+    
+ 
+
+    if (message=""+message){
+        document.getElementById('Login').style.display = "none";
+        document.getElementById('loadingGif').style.display = "block";
+        setTimeout(function() {
+        document.getElementById('loadingGif').style.display = "none";
+        document.getElementById('showme').style.display = "block";
+        },2500);
+        
+    
+    }
+     
+    else{
+
+        document.getElementById('loadingGif').style.display = "none";
+        
+        
+}
+     
+  }
