@@ -188,3 +188,47 @@ function asideSectionTogglerBtn()
         allSection[i].classList.toggle('open');
     }
 }
+
+
+// Contact Form 
+function sendmail(){
+    
+			var name = $('#Name').val();
+			var email = $('#Sender').val();
+			var subject = $('#Subject').val();
+      var message = $('#Message').val();
+
+			// var body = $('#body').val();
+
+			var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+			//console.log(name, phone, email, message);
+
+			Email.send({
+                                SecureToken:"cb13b74a-8d94-4abc-a818-d4554ea8b61d",
+				To: 'tflash978@gmail.com',
+				From: "testd6474@gmail.com",
+				Subject: "Email From:  "+name,
+				Body: Body
+			}).then(
+				message =>{
+					//console.log (message);
+					if(message=='OK'){
+					alert('Success!! Thank you for your feedback.');
+					document.getElementById("myForm").reset(); 
+// 					this will reset every field after clicking OK
+// 					window.location.reload();
+					}
+					else{
+						console.error (message);
+						alert(' opps!!! There is an error occured while sending message. ')
+						
+					}
+
+				}
+			);
+
+
+
+		}
+
+// Contact form end 
