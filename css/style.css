@@ -1338,4 +1338,5 @@ select {
 /* For ladergif */
 .sent{
     color: rgb(123, 153, 15);
+    text-align: center;
 }
