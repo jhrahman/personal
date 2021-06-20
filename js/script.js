@@ -250,7 +250,7 @@ function showDiv() {
         document.getElementById('loadingGif').style.display = "none";
 //         document.getElementById('showme').style.display = "block";
 	document.getElementById('Login').style.display = "block";
-        },2000);
+        },2500);
         
     
     }
