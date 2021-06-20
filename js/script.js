@@ -217,6 +217,7 @@ function sendmail(){
 					document.getElementById("myForm").reset(); 
 // 					this will reset every field after clicking OK
 // 					window.location.reload();
+					document.getElementById('done').style.display = "block"; 
 					}
 					else{
 						console.error (message);
@@ -247,8 +248,9 @@ function showDiv() {
         document.getElementById('loadingGif').style.display = "block";
         setTimeout(function() {
         document.getElementById('loadingGif').style.display = "none";
-        document.getElementById('showme').style.display = "block";
-        },2500);
+//         document.getElementById('showme').style.display = "block";
+	document.getElementById('Login').style.display = "block";
+        },2000);
         
     
     }
