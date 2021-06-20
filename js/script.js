@@ -246,6 +246,7 @@ function showDiv() {
     if (message=""+message){
         document.getElementById('Login').style.display = "none";
         document.getElementById('loadingGif').style.display = "block";
+	document.getElementById('done').style.display = "none"; 
         setTimeout(function() {
         document.getElementById('loadingGif').style.display = "none";
 //         document.getElementById('showme').style.display = "block";
