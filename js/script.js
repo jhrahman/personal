@@ -219,7 +219,7 @@ function sendmail(){
 					setTimeout(function(){
                                         window.location.reload();
                                         },1800);
-					
+					}	
 					else{
 						console.error (message);
 						alert(' opps!!! There is an error occured while sending message. ')
