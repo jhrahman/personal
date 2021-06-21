@@ -215,10 +215,11 @@ function sendmail(){
 					if(message=='OK'){
 					alert('Success!! Thank you for your feedback.');
 					document.getElementById("myForm").reset(); 
-// 					this will reset every field after clicking OK
-// 					window.location.reload();
 					document.getElementById('done').style.display = "block"; 
-					}
+					setTimeout(function(){
+                                        window.location.reload();
+                                        },1800);
+					
 					else{
 						console.error (message);
 						alert(' opps!!! There is an error occured while sending message. ')
