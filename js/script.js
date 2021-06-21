@@ -193,45 +193,53 @@ function asideSectionTogglerBtn()
 // Contact Form 
 function sendmail(){
     
-			var name = $('#Name').val();
-			var email = $('#Sender').val();
-			var subject = $('#Subject').val();
-      var message = $('#Message').val();
+    var name = $('#Name').val();
+    var email = $('#Sender').val();
+    var subject = $('#Subject').val();
+    var message = $('#Message').val();
 
-			// var body = $('#body').val();
+    // var body = $('#body').val();
 
-			var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
-			//console.log(name, phone, email, message);
+    var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+    //console.log(name, phone, email, message);
+    
+    
+    Email.send({
+        SecureToken:"cb13b74a-8d94-4abc-a818-d4554ea8b61d",
+        To: 'tflash978@gmail.com',
+        From: "testd6474@gmail.com",
+        Subject: "Email From:  "+name,
+        Body: Body
+    }).then(
+        message =>{
+            //console.log (message);
+            if(message=='OK'){
+            alert('Success!! Thank you for your feedback.');
+            document.getElementById("myForm").reset();
+            document.getElementById('done').style.display = "block"; 
+            setTimeout(function(){
+                window.location.reload();
+            },1800);
+            
+            
+// 					this will reset every field after clicking OK
+			// 
+        }
+            else{
+                console.error (message);
+                alert(' opps!!! There is an error occured while sending message. ')
+                
+            }
+            
+            
+            
 
-			Email.send({
-                                SecureToken:"cb13b74a-8d94-4abc-a818-d4554ea8b61d",
-				To: 'tflash978@gmail.com',
-				From: "testd6474@gmail.com",
-				Subject: "Email From:  "+name,
-				Body: Body
-			}).then(
-				message =>{
-					//console.log (message);
-					if(message=='OK'){
-					alert('Success!! Thank you for your feedback.');
-					document.getElementById("myForm").reset(); 
-					document.getElementById('done').style.display = "block"; 
-					setTimeout(function(){
-                                        window.location.reload();
-                                        },1800);
-					}	
-					else{
-						console.error (message);
-						alert(' opps!!! There is an error occured while sending message. ')
-						
-					}
-
-				}
-			);
+        }
+    );
 
 
 
-		}
+}
 
 // Contact form end 
 
@@ -252,7 +260,7 @@ function showDiv() {
         document.getElementById('loadingGif').style.display = "none";
 //         document.getElementById('showme').style.display = "block";
 	document.getElementById('Login').style.display = "block";
-        },2500);
+        },3000);
         
     
     }
