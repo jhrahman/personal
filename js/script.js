@@ -205,7 +205,7 @@ function sendmail(){
     
     
     Email.send({
-        SecureToken:"8b685831-22f7-4428-8809-71707d5c8839",
+        SecureToken:"ddbf0045-a020-4c52-948e-4c3743daeb81",
         To: 'tflash978@gmail.com',
         From: "nrply111@gmail.com",
         Subject: "Email From:  "+name,
@@ -219,7 +219,7 @@ function sendmail(){
             document.getElementById('done').style.display = "block"; 
             setTimeout(function(){
                 window.location.reload();
-            },2800);
+            },2000);
             
             
 // 					this will reset every field after clicking OK
