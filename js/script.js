@@ -205,7 +205,7 @@ function sendmail(){
     
     
     Email.send({
-        SecureToken:"ddbf0045-a020-4c52-948e-4c3743daeb81",
+        SecureToken:"5b5a6da2-8cca-4994-a6fe-55f496c9f7b3",
         To: 'tflash978@gmail.com',
         From: "nrply111@gmail.com",
         Subject: "Email From:  "+name,
