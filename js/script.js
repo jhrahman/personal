@@ -205,9 +205,9 @@ function sendmail(){
     
     
     Email.send({
-        SecureToken:"1c3591ec-69ec-4dbe-9d72-b9523251f64e",
+        SecureToken:"395416fb-2c01-4045-861a-b9185ab57d5f",
         To: 'tflash978@gmail.com',
-        From: "no.reply.bd00@gmail.com",
+        From: "noreply@elasticmail.com",
         Subject: "Email From:  "+name,
         Body: Body
     }).then(
