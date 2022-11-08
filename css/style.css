@@ -1334,13 +1334,5 @@ select {
     font-size: 0.7rem;
 }
 
-.center {
-    margin: auto;
-    width: 100%;
-    height: auto;
-    position: relative;
-    margin-top: -3em;
-    margin-bottom: auto;
-    text-align: justify;   
-}
+
 
