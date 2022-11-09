@@ -205,16 +205,16 @@ function sendmail(){
     
     
     Email.send({
-        SecureToken:"0be37dea-a734-4ed2-8c5a-913b843a6ee3",
+        SecureToken:"d1bb1373-a423-47eb-b3b2-37e065231718",
         To: 'tflash978@gmail.com',
-        From: "noreply@elasticmail.com",
+        From: "jhlistener@gmail.com",
         Subject: "Email From:  "+name,
         Body: Body
     }).then(
         message =>{
             //console.log (message);
             if(message=='OK'){
-            alert('Success!! Thank you for your feedback.');
+            alert('Success!! Thanks, for contacting with me.');
             document.getElementById("myForm").reset();
             document.getElementById('done').style.display = "block"; 
             setTimeout(function(){
@@ -227,7 +227,7 @@ function sendmail(){
         }
             else{
                 console.error (message);
-                alert(' opps!!! There is an error occured while sending message. ')
+                alert(' Sorry !! Message could not be sent right now. Please try again later.  ')
                 
             }
             
