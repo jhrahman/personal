@@ -298,3 +298,18 @@ document.addEventListener('DOMContentLoaded', function() {
         ageElement.textContent = calculateAge(birthDate);
     }
 });
+
+// age calculation ended
+
+
+
+// Update the copyright year
+document.addEventListener('DOMContentLoaded', function() {
+    const currentYear = new Date().getFullYear();
+    const copyrightElement = document.getElementById('copyright'); // Ensure this ID matches your HTML element
+    if (copyrightElement) {
+        copyrightElement.textContent = `© ${currentYear}, Jahidur Rahman`; // Replace "My Name" with your actual name
+    }
+});
+
+// copyright year calculation ended
