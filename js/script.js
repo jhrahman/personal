@@ -273,3 +273,28 @@ function showDiv() {
 }
      
   }
+
+//function to calculate age automatically
+function calculateAge(birthDate) {
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+
+    // Adjust age if the birthday hasn't occurred yet this year
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+
+// Set your birth date here (YYYY, MM - 1, DD)
+const birthDate = new Date(1998, 0 - 1, 13); // Replace with your birth date
+
+// Update the age on the page once it is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const ageElement = document.getElementById('age'); 
+    if (ageElement) {
+        ageElement.textContent = calculateAge(birthDate);
+    }
+});
