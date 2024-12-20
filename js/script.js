@@ -289,7 +289,7 @@ function calculateAge(birthDate) {
 }
 
 // Set your birth date here (YYYY, MM - 1, DD)
-const birthDate = new Date(1998, 0 - 1, 13); // Replace with your birth date
+const birthDate = new Date(1998, 1, 13); // Replace with your birth date
 
 // Update the age on the page once it is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
